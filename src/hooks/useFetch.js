@@ -29,6 +29,13 @@ export const useFetch = ( url ) => {
                 }
 
             })
+            .catch( () => {
+                setState({
+                    data: null,
+                    loading: false,
+                    err: 'info cannot be loaded'
+                })
+            })
 
     }, [ url ])
 
